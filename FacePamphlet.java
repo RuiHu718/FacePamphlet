@@ -7,17 +7,26 @@
 
 import acm.program.*;
 import stanford.facepamphlet.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
 
 public class FacePamphlet extends ConsoleProgram implements FPConstants {
 
-/* Initializes the application */
+    /* Initializes the application */
 
-	public void init() {
-		repository = new FPRepositoryStub("eroberts", "Eric Roberts");
-		// You fill in the rest
-	}
+    public void init() {
+        repository = new FPRepositoryStub("eroberts", "Eric Roberts");
+        initWestPanel();
+    }
 
-/* Instance variables */
-	private FPRepository repository;
+
+    /* Adds interactors on the west panel*/
+    private void initWestPanel() {
+        add(new JButton("one"), WEST);
+    }
+
+    /* Instance variables */
+    private FPRepository repository;
 
 }
