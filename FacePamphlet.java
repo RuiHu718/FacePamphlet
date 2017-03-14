@@ -33,6 +33,16 @@ public class FacePamphlet extends ConsoleProgram implements FPConstants {
         add(new JButton("Request"), WEST);
         add(new JLabel("Pending friend request: "), WEST);
         add(pendingFriends, WEST);
+        add(new JButton("Accept"), WEST);
+        add(new JButton("Reject"), WEST);
+        add(new JLabel("Status: "), WEST);
+        add(status, WEST);
+        status.addActionListener(this);
+        add(new JButton("Change Status"), WEST);
+        add(new JLabel("Image: "), WEST);
+        add(image, WEST);
+        image.addActionListener(this);
+        add(new JButton("Change Image"), WEST);        
     }
 
     /* Instance variables */
@@ -41,5 +51,6 @@ public class FacePamphlet extends ConsoleProgram implements FPConstants {
     private FPScrollableList friends = new FPScrollableList();
     private JTextField friendRequest = new JTextField();
     private FPScrollableList pendingFriends = new FPScrollableList();    
-
+    private JTextField status = new JTextField();
+    private JTextField image = new JTextField();    
 }
