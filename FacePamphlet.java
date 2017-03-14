@@ -23,11 +23,13 @@ public class FacePamphlet extends ConsoleProgram implements FPConstants {
 
     /* Adds interactors on the west panel*/
     private void initWestPanel() {
+        add(name, WEST);        
         add(new JButton("one"), WEST);
         add(new JButton("two"), WEST);        
     }
 
     /* Instance variables */
     private FPRepository repository;
+    private JButton name = new JButton("Eric Roberts");
 
 }
