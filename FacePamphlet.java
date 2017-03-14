@@ -26,7 +26,11 @@ public class FacePamphlet extends ConsoleProgram implements FPConstants {
         add(name, WEST);
         add(new JLabel("Friends:"), WEST);
         add(friends, WEST);
-        add(new JButton("one"), WEST);
+        add(new JButton("Visit"), WEST);
+        add(new JLabel("Send A friend request: "), WEST);
+        add(friendRequest, WEST);
+        friendRequest.addActionListener(this);
+        
         add(new JButton("two"), WEST);        
     }
 
@@ -34,5 +38,6 @@ public class FacePamphlet extends ConsoleProgram implements FPConstants {
     private FPRepository repository;
     private JButton name = new JButton("Eric Roberts");
     private FPScrollableList friends = new FPScrollableList();
+    private JTextField friendRequest = new JTextField();
 
 }
