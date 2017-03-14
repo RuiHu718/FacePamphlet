@@ -47,6 +47,8 @@ public class FacePamphlet extends ConsoleProgram implements FPConstants {
 
         add(pendingFriends, WEST);
         pendingFriends.addActionListener(this);
+        pendingFriends.setActionCommand("Accept");
+        pendingFriends.setActionCommand("Reject");        
 
         add(new JButton("Accept"), WEST);
         add(new JButton("Reject"), WEST);
