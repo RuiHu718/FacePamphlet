@@ -52,6 +52,11 @@ public class FacePamphlet extends ConsoleProgram implements FPConstants {
     private void initEastPanel() {
         wallName = new JLabel("Eric's Wall", JLabel.CENTER);
         add(wallName, EAST);
+        add(wall, EAST);
+        wall.setEditable(false);
+        add(new JLabel("Message Area"), EAST);
+        add(messageArea, EAST);
+        add(new JButton("Send"), EAST);
     }
     
     /* Instance variables */
