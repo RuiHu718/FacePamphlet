@@ -20,32 +20,50 @@ public class FacePamphlet extends ConsoleProgram implements FPConstants {
         repository = new FPRepositoryStub("eroberts", "Eric Roberts");
         initWestPanel();
         initEastPanel();
+        addActionListeners();        
     }
 
 
     /* Adds interactors on the west panel*/
     private void initWestPanel() {
         add(name, WEST);
+
         add(new JLabel("Friends:"), WEST);
+
         add(friends, WEST);
+        friends.addActionListener(this);
+        friends.setActionCommand("Visit");
+
         add(new JButton("Visit"), WEST);
+
         add(new JLabel("Send A friend request: "), WEST);
+
         add(friendRequest, WEST);
         friendRequest.addActionListener(this);
+
         add(new JButton("Request"), WEST);
+
         add(new JLabel("Pending friend request: "), WEST);
+
         add(pendingFriends, WEST);
+        pendingFriends.addActionListener(this);
+
         add(new JButton("Accept"), WEST);
         add(new JButton("Reject"), WEST);
+
         add(new JLabel("Status: "), WEST);
+
         add(status, WEST);
         status.addActionListener(this);
+
         add(new JButton("Change Status"), WEST);
+
         add(new JLabel("Image: "), WEST);
+
         add(image, WEST);
         image.addActionListener(this);
+
         add(new JButton("Change Image"), WEST);
-        addActionListeners();
     }
 
 
