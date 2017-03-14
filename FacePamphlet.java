@@ -54,7 +54,7 @@ public class FacePamphlet extends ConsoleProgram implements FPConstants {
         add(wallName, EAST);
         add(wall, EAST);
         wall.setEditable(false);
-        add(new JLabel("Message Area"), EAST);
+        add(new JLabel("Message Area", JLabel.CENTER), EAST);
         add(messageArea, EAST);
         add(new JButton("Send"), EAST);
     }
