@@ -42,7 +42,9 @@ public class FacePamphlet extends ConsoleProgram implements FPConstants {
         add(new JLabel("Image: "), WEST);
         add(image, WEST);
         image.addActionListener(this);
-        add(new JButton("Change Image"), WEST);        
+        add(new JButton("Change Image"), WEST);
+
+        addActionListeners();
     }
 
     /* Instance variables */
