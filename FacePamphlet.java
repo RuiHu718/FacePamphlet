@@ -25,6 +25,7 @@ public class FacePamphlet extends ConsoleProgram implements FPConstants {
     private void initWestPanel() {
         add(name, WEST);
         add(new JLabel("Friends:"), WEST);
+        add(friends, WEST);
         add(new JButton("one"), WEST);
         add(new JButton("two"), WEST);        
     }
@@ -32,5 +33,6 @@ public class FacePamphlet extends ConsoleProgram implements FPConstants {
     /* Instance variables */
     private FPRepository repository;
     private JButton name = new JButton("Eric Roberts");
+    private FPScrollableList friends = new FPScrollableList();
 
 }
