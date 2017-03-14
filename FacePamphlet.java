@@ -19,6 +19,7 @@ public class FacePamphlet extends ConsoleProgram implements FPConstants {
     public void init() {
         repository = new FPRepositoryStub("eroberts", "Eric Roberts");
         initWestPanel();
+        initEastPanel();
     }
 
 
@@ -44,10 +45,15 @@ public class FacePamphlet extends ConsoleProgram implements FPConstants {
         add(image, WEST);
         image.addActionListener(this);
         add(new JButton("Change Image"), WEST);
-
         addActionListeners();
     }
 
+
+    private void initEastPanel() {
+        wallName = new JLabel("Eric's Wall", JLabel.CENTER);
+        add(wallName, EAST);
+    }
+    
     /* Instance variables */
     private FPRepository repository;
     private JButton name = new JButton("Eric Roberts");
@@ -55,5 +61,9 @@ public class FacePamphlet extends ConsoleProgram implements FPConstants {
     private JTextField friendRequest = new JTextField();
     private FPScrollableList pendingFriends = new FPScrollableList();    
     private JTextField status = new JTextField();
-    private JTextField image = new JTextField();    
+    private JTextField image = new JTextField();
+    private FPScrollableTextArea wall = new FPScrollableTextArea();
+    private FPScrollableTextArea messageArea = new FPScrollableTextArea();
+    private JLabel wallName;
+    
 }
