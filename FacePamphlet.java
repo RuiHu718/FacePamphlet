@@ -3,7 +3,7 @@
  * -----------------------
  * This is the starter file for Assignment #5, in which you get to
  * implement FacePamphlet -- a simplified version of Facebook.
- * need to commit
+ * 
  */
 
 import acm.program.*;
