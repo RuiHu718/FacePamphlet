@@ -24,6 +24,10 @@ public class FacePamphlet extends ConsoleProgram implements FPConstants {
     }
 
 
+    public void actionPerformed(ActionEvent e) {
+        println(e.getActionCommand());
+    }
+    
     /* Adds interactors on the west panel*/
     private void initWestPanel() {
         add(name, WEST);
