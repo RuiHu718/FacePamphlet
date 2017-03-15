@@ -25,7 +25,26 @@ public class FacePamphlet extends ConsoleProgram implements FPConstants {
 
 
     public void actionPerformed(ActionEvent e) {
-        println(e.getActionCommand());
+        //println(e.getActionCommand());
+        if (e.getActionCommand().equals("Eric Roberts")) {
+            //return to home page
+        } else if (e.getActionCommand().equals("Visit") || e.getSource() == friends) {
+            //visit a friend
+        } else if (e.getActionCommand().equals("Request") || e.getSource() == friendRequest) {
+            //friend request
+        } else if (e.getActionCommand().equals("Accept")) {
+            //accept friend request
+        } else if (e.getActionCommand().equals("Reject")) {
+            //reject friend request
+        } else if (e.getActionCommand().equals("Change Status") || e.getSource() == status) {
+            //change status
+        } else if (e.getActionCommand().equals("Change Image") || e.getSource() == image) {
+            //load image
+        } else if (e.getActionCommand().equals("send")) {
+            //write on the wall
+        } else {
+            //catch all 
+        }
     }
     
     /* Adds interactors on the west panel*/
